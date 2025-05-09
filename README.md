@@ -50,6 +50,21 @@ extract-docx -f sample.docx -t output.txt
 extract-docx -f sample.docx -s
 ```
 
+#### Building and Installing the Command-line Tool
+
+To build and install the command-line tool:
+
+```bash
+# Build the tool
+cargo build --release
+
+# The binary will be available at
+./target/release/extract-docx
+
+# You can also install it to your system
+cargo install --path .
+```
+
 Test
 -----
 
