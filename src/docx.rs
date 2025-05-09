@@ -84,7 +84,7 @@ impl MsDoc<Docx> for Docx {
 
         Ok(Docx {
             path: path.as_ref().to_path_buf(),
-            data: Cursor::new(txt.join("")),
+            data: Cursor::new(txt.join(" ")), // Join with space to prevent issues like "4Relates"
         })
     }
 }

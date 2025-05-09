@@ -86,5 +86,6 @@ pub(crate) fn open_doc_read_data<P: AsRef<Path>>(
         }
     }
 
-    Ok(txt.join(""))
+    // Join text segments with spaces to prevent issues like "4Relates" or "2Activity"
+    Ok(txt.join(" "))
 }
