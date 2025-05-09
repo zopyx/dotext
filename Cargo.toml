@@ -9,3 +9,8 @@ repository = "https://github.com/anvie/dotext"
 [dependencies]
 zip = { version = "0.2", default-features = false }
 quick-xml = "0.9.4"
+clap = "2.33"
+
+[[bin]]
+name = "extract-docx"
+path = "src/bin/extract_docx.rs"

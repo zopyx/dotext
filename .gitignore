@@ -6,3 +6,5 @@ target/
 *.bak
 *.lock
 
+
+**/.claude/settings.local.json

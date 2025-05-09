@@ -22,6 +22,8 @@ Supported Document
 Usage
 ------
 
+### As a Library
+
 ```rust
 let mut file = Docx::open("samples/sample.docx").unwrap();
 let mut isi = String::new();
@@ -30,6 +32,22 @@ println!("CONTENT:");
 println!("----------BEGIN----------");
 println!("{}", isi);
 println!("----------EOF----------");
+```
+
+### Command-line Tool
+
+The package includes a command-line tool called `extract-docx` for extracting text from DOCX files:
+
+```bash
+# Write output to a file
+extract-docx --from sample.docx --to output.txt
+
+# Write output to stdout
+extract-docx --from sample.docx --stdout
+
+# Using short options
+extract-docx -f sample.docx -t output.txt
+extract-docx -f sample.docx -s
 ```
 
 Test
